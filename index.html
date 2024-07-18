@@ -5,6 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Difraxion Landing Page</title>
     <link rel="stylesheet" href="/style/style.css">
+    <style>
+        
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            display: none; /* Oculto por defecto */
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .loading-bar {
+            width: 80%;
+            max-width: 400px;
+            height: 10px;
+            background-color: #ddd;
+            position: relative;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+
+        .loading-bar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: #FCBB04;
+            animation: loading 2s infinite;
+        }
+
+        @keyframes loading {
+            0% {
+                left: -100%;
+            }
+            100% {
+                left: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -12,20 +57,24 @@
         <h1 class="Titulo">#SomosLa<span class="span-titulo">Conexión</span>ATusIdeas</h1>
     </header>
     <section class="intro">
-        <p>En <span class="span-intro">Difraxion</span> tenemos más de <span class="span-intro">15 años de experiencia</span> trabajando con empresas del sector público y          privado, a los cuales les ofrecemos proyectos a la medida de sus necesidades.
+        <p>En <span class="span-intro">Difraxion</span> tenemos más 
+        de <span class="span-intro">15 años de experiencia</span> 
+        trabajando con empresas del sector público y          
+        privado, a los cuales les ofrecemos proyectos a la medida 
+        de sus necesidades.
        </p>
        <br>
        <p>
-        Somos expertos en <span class="span-intro-parrafo">pontencializar tus ideas y conectar con ellas a través de nuestras solucines</span> de comunicación interna.
+        Somos expertos en <span class="span-intro-parrafo">potencializar tus ideas y conectar con ellas a través de nuestras soluciones</span> de comunicación interna.
        </p>
     </section>
     <section class="registro">
         <h2>REGISTRO</h2>
-        <!-- <hr> -->
+    
         <div class="registro_formulario">
-            <form id="registroForm" id="registroForm" action="https://formsubmit.co/antoniojcc786@gmail.com" method="POST">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" required>
+            <form id="registroForm" action="https://formsubmit.co/antoniojcc786@gmail.com" method="POST">
+                <label for="name">Nombre</label>
+                <input type="text" name="name" id="name" required>
     
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>
@@ -36,6 +85,9 @@
                 <label for="ciudad">Ciudad</label>
                 <input type="text" id="ciudad" name="ciudad" required>
                 <button type="submit">Enviar</button>
+
+                <input type="hidden" name="_next" value="https://main--landing-page-difra.netlify.app/">
+                <input type="hidden" name="_captcha" value="false"> 
             </form>
         </div>
     </section>
@@ -45,17 +97,17 @@
         <div class="team">
             <div class="team-member">
                 <img src="/img/2.png" alt="Foto de David Enriquez">
-                <p><aspan class="team-span">DAVID ENRIQUEZ</aspan><br>Director General Difraxion</p>
+                <p><span class="team-span">DAVID ENRIQUEZ</span><br>Director General Difraxion</p>
             </div>
             <div class="team-member">
                 <img src="/img/1.png" alt="Foto de Andrea Huerta">
-                <p><aspan class="team-span">ANDREA HUERTA</aspan><br>Gerente de proyectos</p>
+                <p><span class="team-span">ANDREA HUERTA</span><br>Gerente de proyectos</p>
             </div>
         </div>
     </section>
-    <footer >
+    <footer>
        <div class="social">
-        <img src="/img/logo.png" class="logo-social" alt="">
+        <img src="/img/logo.png" class="logo-social" alt="Difraxion Logo">
         <p>&copy; Difraxion is a registered licensed by Difraxion.</p>
         <div class="social-media">
             <a href="https://www.facebook.com/difraxiongroup/?locale=es_LA"><img src="/img/facebook.png" alt="Facebook"></a>
@@ -63,8 +115,12 @@
             <a href="https://x.com/difraxion"><img src="/img/logotipo-de-twitter.png" alt="Twitter"></a>
             <a href="https://www.linkedin.com/company/difraxion-group/"><img src="/img/linkedin.png" alt="LinkedIn"></a>
         </div>
-      
+      </div>
     </footer>
+
+    <div class="loading-overlay">
+        <div class="loading-bar"></div>
+    </div>
     <script src="/js/script.js"></script>
 </body>
 </html>
