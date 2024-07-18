@@ -1,0 +1,317 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header {
+    background: #FCBB04;
+    padding: 0 0 10px;  
+
+    text-align: center;
+}
+
+.Titulo{
+    text-align: center;
+}
+
+.span-titulo{
+    color: white;
+}
+
+.logo {
+    max-width: 200px;
+    display: flex;
+    left: -150px;
+    
+    
+}
+
+.intro {
+    padding: 10px 600px 10px 600px;
+    font-size: 20px;
+    background: #FCBB04;
+    color: black;
+    text-align: center;
+}
+
+.span-intro{
+    background-color: white;
+    color: black;
+    font-weight: 600;
+}
+
+.span-intro-parrafo{
+    font-weight: 1000;
+}
+
+
+.potencializa_h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2em;
+}
+
+.potencializa_span {
+    font-size: 1em;
+    color: white;
+    background-color: #000;
+    display: block;
+    text-align: center;
+}
+
+.potencializa_span_2 {
+    font-size: 1em;
+    color: white;
+    background-color: #000;
+    display: block;
+    text-align: center;
+}
+
+.registro {
+    padding: 20px;
+    text-align: center;
+    background-color: #000;
+    color: #ccc;
+}
+
+.registro_formulario {
+    width: 40%;
+    padding: 10px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    box-sizing: border-box;
+   
+}
+
+
+
+
+
+form {
+    display: inline-block;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background: #FCBB04;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.potencializa {
+    padding: 20px;
+    background: #FCBB04;
+    text-align: center;
+}
+
+.team {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    margin: 0 10px;
+    text-align: center;
+}
+
+.team-member img {
+    border-radius: 50%;
+    max-width: 150px;
+}
+
+footer {
+    background:  #FCBB04;
+    color: #000;
+    padding: 100px 0 120px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo-social{
+    height: 60px;
+}
+
+.social{
+    color: white;
+    background-color: #000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.social-media a {
+    margin: 0 5px;
+   
+}
+
+.social-media img {
+    max-width: 30px;
+}
+
+
+
+/* Responsive */
+@media (min-width: 1024px) {
+    .registro_formulario {
+        width: 60%;
+    }
+
+    .registro_formulario {
+        width: 60%; 
+    }
+
+    .logo {
+        max-width: 150px;
+    }
+
+    .team-member img {
+        max-width: 120px;
+    }
+
+    .intro {
+        padding: 10px 100px 10px 100px;
+        font-size: 20px;
+        background: #FCBB04;
+        color: black;
+        text-align: center;
+    }
+    
+
+}
+
+
+@media (max-width: 1024px) {
+    
+
+    .intro {
+        padding: 10px 100px 10px 100px;
+        font-size: 20px;
+        background: #FCBB04;
+        color: black;
+        text-align: center;
+    }
+    
+
+}
+
+@media (max-width: 768px) {
+    .registro_formulario {
+        width: 80%;
+    }
+
+    .Titulo{
+        font-size: 20px;
+        color: black;
+        text-align: center;     
+    }
+
+    
+
+    .team {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member {
+        margin: 10px 0;
+    }
+
+    .registro_formulario {
+        width: 80%; 
+    }
+}
+
+@media (max-width: 480px) {
+
+    .Titulo{
+        font-size: 20px;
+        color: black;
+        text-align: center;     
+    }
+
+    .intro {
+        padding: 10px 50px 10px 50px;
+        font-size: 10px;
+        background: #FCBB04;
+        color: black;
+        text-align: center;
+    }
+
+    header, .intro, .registro, .potencializa, footer {
+        padding: 10px;
+    }
+
+    input, button {
+        width: 100%;
+        padding: 8px;
+    }
+
+    .logo {
+        max-width: 100px;
+    }
+
+    .team-member img {
+        max-width: 100px;
+    }
+
+    .social-media img {
+        max-width: 20px;
+    }
+
+    .registro {
+        padding: 10px; 
+    }
+
+    .registro_formulario {
+        width: 100%; 
+        padding: 30px; 
+    }
+
+
+    .potencializa_h2 {
+        font-size: 20px;
+    }
+}
+
+
+@media (max-width: 300px) {
+    
+
+    .Titulo{
+        font-size: 15px;
+        color: black;
+        text-align: center;     
+    }
+
+}
