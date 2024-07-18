@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('registroForm'); // Asegúrate de que el id coincide
+    const form = document.getElementById('registroForm');
     const loadingOverlay = document.querySelector('.loading-overlay');
 
     if (form) {
         form.addEventListener('submit', function(event) {
-            event.preventDefault(); // Detener el envío del formulario por defecto
+            event.preventDefault();
 
             // Mostrar la barra de carga
             loadingOverlay.style.display = 'flex';
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const formData = new FormData(form);
 
             // Enviar el formulario usando fetch
-            fetch(form.action || '', { // Añadir un valor por defecto en caso de que `form.action` esté vacío
+            fetch(form.action || '', {
                 method: 'POST',
                 body: formData,
                 headers: {
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (formContainer) {
                         formContainer.innerHTML = `
                             <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background-color: #FCBB04;">
-                                <iframe src="https://www.youtube.com/embed/HwXOBXsPnEE?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="position: absolute; top: 50%; left: 50%; width: 60%; height: 70%; transform: translate(-50%, -50%); background-color: #FCBB04; border: none;"></iframe>
+                                <iframe src="https://www.youtube.com/embed/HwXOBXsPnEE?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="position: absolute; top: 50%; left: 50%; width: 70%; height: 70%; transform: translate(-50%, -50%); background-color: #FCBB04; border: none;"></iframe>
                             </div>`;
                         
                         formContainer.style.backgroundColor = '#FCBB04';
