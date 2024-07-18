@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('registroForm');
+    const form = document.getElementById('registroForm'); // Asegúrate de que el id coincide
     const loadingOverlay = document.querySelector('.loading-overlay');
 
     if (form) {
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const formData = new FormData(form);
 
             // Enviar el formulario usando fetch
-            fetch(form.action, {
+            fetch(form.action || '', { // Añadir un valor por defecto en caso de que `form.action` esté vacío
                 method: 'POST',
                 body: formData,
                 headers: {
@@ -35,10 +35,10 @@ document.addEventListener('DOMContentLoaded', function() {
                         console.error('Contenedor del formulario no encontrado.');
                     }
                 } else {
-                    console.error('Error al enviar el formulario.');
+                    console.error('Error al enviar el formulario. Estado:', response.status);
                 }
             })
-            .catch(error => console.error('Error:', error))
+            .catch(error => console.error('Error en la solicitud:', error))
             .finally(() => {
                 // Ocultar la barra de carga después de recibir la respuesta
                 loadingOverlay.style.display = 'none';
